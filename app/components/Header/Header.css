@@ -1,0 +1,20 @@
+.left {
+    float: left;
+    width: 33%;
+}
+
+.right{
+    float: right;
+    width: 33%;
+    text-align: right;
+}
+
+.middle {
+    float: left;
+    width: 33%;
+    text-align: center;
+}
+
+.header {
+    padding: 21px;
+}

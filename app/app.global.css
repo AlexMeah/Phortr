@@ -1,37 +1,43 @@
 body {
-  position: relative;
-  color: #333;
-  height: 100vh;
-  background-color: #232C39;
-  background: linear-gradient(to left, #8e9eab , #eef2f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  font-family: Arial, Helvetica, Helvetica Neue;
-  overflow-y: hidden;
+    position: relative;
+    color: #333;
+    height: 100vh;
+    background-color: #232C39;
+    background: linear-gradient(to left, #8e9eab, #eef2f3);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: Arial, Helvetica, Helvetica Neue;
+    overflow-y: hidden;
+    margin: 0;
 }
-
 h2 {
-  margin: 0;
-  font-size: 2.25rem;
-  font-weight: bold;
-  letter-spacing: -.025em;
-  margin-bottom: 32px;
+    margin: 0;
+    font-size: 2.25rem;
+    font-weight: bold;
+    letter-spacing: -.025em;
+    margin-bottom: 32px;
 }
-
 p {
-  font-size: 24px;
+    font-size: 24px;
 }
-
 li {
-  list-style: none;
+    list-style: none;
 }
-
 a {
-  color: white;
-  opacity: .75;
-  text-decoration: none;
+    color: white;
+    opacity: .75;
+    text-decoration: none;
+}
+a:hover {
+    opacity: 1;
+    text-decoration: none;
+    cursor: pointer;
+}
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
 }
 
-a:hover {
-  opacity: 1;
-  text-decoration: none;
-  cursor: pointer;
+.cf:after {
+    clear: both;
 }

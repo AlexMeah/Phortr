@@ -1,8 +1,7 @@
 import React, { Component, PropTypes } from 'react';
-import { Link } from 'react-router';
 import styles from './Photos.css';
 
-import Progress from './Progress';
+import Header from './Header';
 const DISLIKE = 37;
 const SUPERLIKE = 38;
 const LIKE = 39;
@@ -12,22 +11,25 @@ class Photos extends Component {
         files: PropTypes.array.isRequired
     };
 
+    static keyPressBound = false;
+
     componentDidMount() {
         this.props.addFiles(this.props.folder);
-        document.addEventListener('keydown', this.keyPress.bind(this));
+        this.keyPressBound = this.keyPress.bind(this);
+        document.addEventListener('keydown', this.keyPressBound);
     }
 
     componentWillUnmount() {
-        document.removeEventListener('keydown', this.keyPress);
+        document.removeEventListener('keydown', this.keyPressBound);
     }
 
     keyPress(e) {
-        var key = e.which;
-        var {
+        const key = e.which;
+        const {
             files,
             navigation
         } = this.props;
-        var file = files[navigation - 1];
+        const file = files[navigation - 1];
 
         if (navigation > files.length) {
             return;
@@ -52,26 +54,25 @@ class Photos extends Component {
 
     render() {
         const { files, navigation } = this.props;
-        console.log(this.props);
 
         if (navigation > files.length) {
             return (
                 <div>
-                    <Link to="/">Start Over</Link>
+                    <Header current={navigation} total={files.length} />
 
-                    <h2>Smashed it!</h2>
+                    <h2 className={styles.tac}>That's it!</h2>
                 </div>
             );
         }
 
         return (
             <div>
-                <Link to="/">Start Over</Link>
-
-                <Progress current={this.props.navigation} total={files.length} />
+                <Header current={navigation} total={files.length} />
 
                 <div className={styles['img-container']}>
-                    <img className={styles.img} src={files[navigation - 1]} />
+                    <div className={styles.img} style={{
+                        backgroundImage: `url(${files[navigation - 1].path})`
+                    }}></div>
                 </div>
             </div>
         );
