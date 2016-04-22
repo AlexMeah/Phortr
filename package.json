@@ -94,6 +94,7 @@
     "webpack-hot-middleware": "^2.10.0"
   },
   "dependencies": {
+    "bluebird": "^3.3.5",
     "css-modules-require-hook": "^4.0.0",
     "electron-debug": "^0.6.0",
     "font-awesome": "^4.6.1",

@@ -1,14 +1,25 @@
 .container {
-  position: absolute;
-  top: 30%;
-  left: 10px;
-  text-align: center;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.children {
+    flex: 1 0 0;
 }
 
 .container h2 {
-  font-size: 5rem;
+    font-size: 5rem;
 }
 
 .container a {
-  font-size: 1.4rem;
+    font-size: 1.4rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
 }

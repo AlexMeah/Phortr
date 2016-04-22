@@ -1,10 +1,18 @@
-import React, { Component } from 'react';
 import Home from '../components/Home';
+import { chooseFolder } from '../actions/folder';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
-export default class HomePage extends Component {
-  render() {
-    return (
-      <Home />
-    );
-  }
+function mapStateToProps(state) {
+    return {
+        folder: state.folder
+    };
 }
+
+function mapDispatchToProps(dispatch) {
+    return bindActionCreators({
+        chooseFolder
+    }, dispatch);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);
