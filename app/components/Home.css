@@ -22,4 +22,19 @@
 .btn {
     display: inline-block;
     padding: 1rem 2rem;
+    -webkit-appearance: none;
+    background: #3498db;
+    border: 0;
+    font-size: inherit;
+    color: #FFF;
+    font-weight: inherit;
+    font-size: 18px;
+    font-family: inherit;
+    outline: none;
+    margin-bottom: 16px;
+    cursor: pointer;
+}
+
+.btn-cta {
+    background: #2ecc71;
 }

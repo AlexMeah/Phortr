@@ -8,17 +8,23 @@ export default class Home extends Component {
         this.props.chooseFolder(dialog.showOpenDialog({ properties: ['openDirectory'] }));
     }
 
+    componentWillMount() {
+        this.props.clearFiles();
+        this.props.removeFolder();
+        this.props.resetNavigation();
+    }
+
     render() {
         return (
             <div>
                 <div className={styles.container}>
                     <h2>Please select a folder</h2>
 
-                    <button onClick={this.chooseFolder.bind(this)}>Choose Folder</button>
+                    <button className={styles.btn} onClick={this.chooseFolder.bind(this)}>{this.props.folder ? 'Change Folder' : 'Choose Folder'}</button>
 
                     {
                         this.props.folder &&
-                        <Link styles={styles.btn} to="/photos">Start Sorting</Link>
+                        <Link className={styles.btn + ' ' + styles['btn-cta']} to="/photos">Start Sorting</Link>
                     }
                 </div>
             </div>

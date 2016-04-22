@@ -1,9 +1,9 @@
 body {
   position: relative;
-  color: white;
+  color: #333;
   height: 100vh;
   background-color: #232C39;
-  background-image: linear-gradient(45deg, rgba(0, 216, 255, .5) 10%, rgba(0, 1, 127, .7));
+  background: linear-gradient(to left, #8e9eab , #eef2f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   font-family: Arial, Helvetica, Helvetica Neue;
   overflow-y: hidden;
 }
@@ -13,7 +13,7 @@ h2 {
   font-size: 2.25rem;
   font-weight: bold;
   letter-spacing: -.025em;
-  color: #fff;
+  margin-bottom: 32px;
 }
 
 p {

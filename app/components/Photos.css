@@ -2,10 +2,11 @@
     max-width: 100%;
     width: auto;
     height: auto;
+    box-shadow: #000 0 0 4px;
 }
 
 .img-container {
-    width: 100vh;
+    width: 100%;
     height: calc(100vh - 60px);
     display: flex;
     align-items: center;
