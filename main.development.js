@@ -6,9 +6,9 @@ let mainWindow = null;
 
 crashReporter.start();
 
-if (process.env.NODE_ENV === 'development') {
+// if (process.env.NODE_ENV === 'development') {
   require('electron-debug')();
-}
+// }
 
 
 app.on('window-all-closed', () => {
