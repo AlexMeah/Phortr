@@ -10,7 +10,6 @@ const path = require('electron').remote.require('path');
 import hasRAW from '../utils/hasRaw';
 
 function moveFile(folder, file) {
-    console.log(file)
     fs.ensureDirSync(path.join(path.dirname(file.path), `/${folder}`));
     fs.move(file.path, path.join(path.dirname(file.path), `/${folder}`, path.basename(file.path)), (err) => {
         err && console.error(err);
