@@ -1,5 +1,7 @@
 # electron-react-boilerplate
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/AlexMeah/Phortr.svg)](https://greenkeeper.io/)
+
 [![NPM version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 [![Dependency Status][david_img]][david_site]
